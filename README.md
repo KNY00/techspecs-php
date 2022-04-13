@@ -23,7 +23,7 @@ This php library provides automatic access to the standardized technical specifi
 ## Installation
 
 ```sh
-composer require techspecs/techspecs-php-sdk
+composer require kny00/techspecs-php-sdk
 ```
 
 ## Usage
