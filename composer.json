@@ -1,7 +1,6 @@
 {
     "name": "techspecs/techspecs-php",
     "type": "library",
-    "version": "v1.0.1",
     "description": "An implementation of TechSpecs API for PHP.",
     "keywords" : [
         "techspecs",
