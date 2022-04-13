@@ -1,5 +1,5 @@
 {
-    "name": "kny00/techspecs-php",
+    "name": "techspecs/techspecs-php",
     "type": "library",
     "version": "1.0.0",
     "description": "An implementation of TechSpecs API for PHP.",
@@ -22,7 +22,6 @@
             "TechSpecsSDK\\": "src/"
         }
     },
-    "minimum-stability": "stable",
     "require": {
         "php": "^7.4",
         "guzzlehttp/guzzle": "^7.4"
