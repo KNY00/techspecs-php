@@ -1,0 +1,6 @@
+vendor
+.php_cs.cache
+.phpunit.result.cache
+.vscode
+index.php_cs
+phpcs.xml
