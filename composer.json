@@ -1,6 +1,7 @@
 {
     "name": "techspecs/techspecs-php",
     "type": "library",
+    "version": "1.0.0",
     "description": "An implementation of TechSpecs API for PHP.",
     "keywords" : [
         "techspecs",
@@ -27,7 +28,5 @@
     },
     "require-dev": {
         "phpunit/phpunit": "9.5"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable" : true
+    }
 }
