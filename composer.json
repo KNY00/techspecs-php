@@ -1,5 +1,5 @@
 {
-    "name": "techspecs/techspecs-php",
+    "name": "kny00/techspecs-php",
     "type": "library",
     "description": "An implementation of TechSpecs API for PHP.",
     "keywords" : [

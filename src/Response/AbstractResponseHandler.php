@@ -7,9 +7,15 @@ use \Psr\Http\Message\StreamInterface;
 abstract class AbstractResponseHandler
 {
     abstract public static function search(StreamInterface $response, string $mode);
-    abstract public static function productDetail(StreamInterface $response, string $mode);
+    abstract public static function productDetail(
+        StreamInterface $response,
+        string $mode
+    );
     abstract public static function brands(StreamInterface $response, string $mode);
-    abstract public static function products(StreamInterface $response, string $mode);
+    abstract public static function products(
+        StreamInterface $response,
+        string $mode
+    );
 
     public static function streamToObject(StreamInterface $stream)
     {
@@ -25,8 +31,11 @@ abstract class AbstractResponseHandler
         }
     }
 
-    public static function response(StreamInterface $response, string $key, string $mode)
-    {
+    public static function response(
+        StreamInterface $response,
+        string $key,
+        string $mode
+    ) {
         AbstractResponseHandler::checkKey($key);
         $responseObject = AbstractResponseHandler::streamToObject($response);
 

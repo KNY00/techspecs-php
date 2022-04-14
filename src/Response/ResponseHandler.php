@@ -28,7 +28,10 @@ class ResponseHandler extends AbstractResponseHandler
         if ($mode === 'raw') {
             return json_encode($responseObject, JSON_PRETTY_PRINT);
         } elseif ($mode === 'pretty') {
-            return json_encode($responseObject['data']['Category'][1], JSON_PRETTY_PRINT);
+            return json_encode(
+                $responseObject['data']['Category'][1],
+                JSON_PRETTY_PRINT
+            );
         }
 
         return 'Invalid Mode';

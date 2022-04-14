@@ -47,9 +47,9 @@ trait DateStringTrait
 
             list($year, $month, $day) = $arrayNumbers;
 
-            if ($this->dayCheck($day) and
-                $this->monthCheck($month) and
-                $this->yearCheck($year)
+            if ($this->dayCheck($day)
+                and $this->monthCheck($month)
+                and $this->yearCheck($year)
             ) {
                 return true;
             }

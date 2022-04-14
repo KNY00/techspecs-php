@@ -27,7 +27,11 @@ class TechSpecsSDK
             'category' => $category,
         ];
 
-        $response = $this->client->request('POST', $path . '?' . $params, ['body' => json_encode($payload)]);
+        $response = $this->client->request(
+            'POST',
+            $path . '?' . $params,
+            ['body' => json_encode($payload)]
+        );
 
         return ResponseHandler::search($response->getBody(), $mode);
     }
@@ -59,8 +63,14 @@ class TechSpecsSDK
         return ResponseHandler::categories($response->getBody(), $mode);
     }
 
-    public function products(array $brand, array $category, string $dateFrom = '', string $dateTo = '', int $page = null, string $mode = 'raw')
-    {
+    public function products(
+        array $brand,
+        array $category,
+        string $dateFrom = '',
+        string $dateTo = '',
+        int $page = null,
+        string $mode = 'raw'
+    ) {
         $this->checkDateFormat($dateFrom);
         $this->checkDateFormat($dateTo);
 
@@ -75,7 +85,11 @@ class TechSpecsSDK
             'to'       => $dateTo,
         ];
 
-        $response = $this->client->request('POST', $path . $params, ['body' => json_encode($payload)]);
+        $response = $this->client->request(
+            'POST',
+            $path . $params,
+            ['body' => json_encode($payload)]
+        );
 
         return ResponseHandler::products($response->getBody(), $mode);
     }
