@@ -39,28 +39,28 @@ Set `$techSpecsKey` to your key value and `$techSpecsBase` to your base value.
 ```php
 require 'vendor/autoload.php';
 
-# Importing the SDK class
+// Importing the SDK class
 use TechSpecsSDK\TechSpecsSDK;
 
-# TechSpecs API Key
+// TechSpecs API Key
 $techSpecsKey = 'techspecs_api_key';
 
-# TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
+// TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
 $techSpecsBase = 'a8TD3mkN49fhg2y';
 
-# Instantiate the Library
+// Instantiate the Library
 $techSpecs = new TechSpecsSDK($techSpecsBase, $techSpecsKey);
 
-# product name or version number to search
+// product name or version number to search
 $keyword = 'iPhone 13';
 
-# product category to search
+// product category to search
 $category = ['all'];
 
-# choose between "pretty" or "raw" mode for viewing response
+// choose between "pretty" or "raw" mode for viewing response
 $response = $techSpecs->search($keyword, $category, 'pretty');
 
-# print the search results
+// print the search results
 print($response);
 
 ```
@@ -70,35 +70,51 @@ print($response);
 ```php
 require 'vendor/autoload.php';
 
-# Importing the SDK class
+// Importing the SDK class
 use TechSpecsSDK\TechSpecsSDK;
 
-# TechSpecs API Key
+// TechSpecs API Key
 $techSpecsKey = 'techspecs_api_key';
 
-# TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
+// TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
 $techSpecsBase = 'a8TD3mkN49fhg2y';
 
-# Instantiate the Library
+// Instantiate the Library
 $techSpecs = new TechSpecsSDK($techSpecsBase, $techSpecsKey);
 
-# enter the page number to fetch results from
+// enter the page number to fetch results from
 $page = 1;
 
-# type in the name of the brand you're looking for or leave this field empty to see results from all brands
+/**
+ * Type in the name of the brand you're looking for
+ * or leave this field empty to see results from all brands
+ */
 $brand = ['Apple'];
 
-# type in the name of the category you're looking for or leave this field empty to see results from all categories
+/**
+ * Type in the name of the category you're looking for
+ * or leave this field empty to see results from all categories
+ */
 $category = ['smartphone'];
 
-# please provide a date range to narrow your search. Leave this field empty to fetch all results from all dates
+/**
+ * Please provide a date range to narrow your search.
+ * Leave this field empty to fetch all results from all dates
+ */
 $dateFrom = '2010-01-01'; // YYYY-MM-DD
 $dateTo = '2022-03-15'; // YYYY-MM-DD
 
-# choose between "pretty" or "raw" mode for viewing response
-$response = $techSpecs->products($brand, $category, $dateFrom, $dateTo, $page, 'pretty');
+// Choose between "pretty" or "raw" mode for viewing response
+$response = $techSpecs->products(
+    $brand,
+    $category,
+    $dateFrom,
+    $dateTo,
+    $page,
+    'pretty'
+);
 
-# print the search results
+// Print the search results
 print($response);
 
 ```
@@ -108,25 +124,25 @@ print($response);
 ```php
 require 'vendor/autoload.php';
 
-# Importing the SDK class
+// Importing the SDK class
 use TechSpecsSDK\TechSpecsSDK;
 
-# TechSpecs API Key
+// TechSpecs API Key
 $techSpecsKey = 'techspecs_api_key';
 
-# TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
+// TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
 $techSpecsBase = 'a8TD3mkN49fhg2y';
 
-# Instantiate the Library
+// Instantiate the Library
 $techSpecs = new TechSpecsSDK($techSpecsBase, $techSpecsKey);
 
-# TechSpecs product id
+// TechSpecs product id
 $techspecsId = '6186b047987cda5f88311983';
 
-# choose between "pretty" or "raw" mode for viewing response
+// choose between "pretty" or "raw" mode for viewing response
 $response = $techSpecs->productDetail($techspecsId, 'pretty');
 
-# print the specifications of the product
+// print the specifications of the product
 print($response);
 
 ```
@@ -135,22 +151,22 @@ print($response);
 ```php
 require 'vendor/autoload.php';
 
-# Importing the SDK class
+// Importing the SDK class
 use TechSpecsSDK\TechSpecsSDK;
 
-# TechSpecs API Key
+// TechSpecs API Key
 $techSpecsKey = 'techspecs_api_key';
 
-# TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
+// TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
 $techSpecsBase = 'a8TD3mkN49fhg2y';
 
-# Instantiate the Library
+// Instantiate the Library
 $techSpecs = new TechSpecsSDK($techSpecsBase, $techSpecsKey);
 
-# choose between "pretty" or "raw" mode for viewing response
+// choose between "pretty" or "raw" mode for viewing response
 $response = $techSpecs->brands('pretty');
 
-# print the search results
+// print the search results
 print($response);
 
 ```
@@ -158,22 +174,21 @@ print($response);
 ```php
 require 'vendor/autoload.php';
 
-# Importing the SDK class
+// Importing the SDK class
 use TechSpecsSDK\TechSpecsSDK;
 
-# TechSpecs API Key
+// TechSpecs API Key
 $techSpecsKey = 'techspecs_api_key';
 
-# TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
+// TechSpecs base https://apis.dashboard.techspecs.io/{techspecs_base}
 $techSpecsBase = 'a8TD3mkN49fhg2y';
-
-# Instantiate the Library
+// Instantiate the Library
 $techSpecs = new TechSpecsSDK($techSpecsBase, $techSpecsKey);
 
-# choose between "pretty" or "raw" mode for viewing response
+// choose between "pretty" or "raw" mode for viewing response
 $response = $techSpecs->categories('pretty');
 
-# print the list of all categories
+// print the list of all categories
 print($response);
 
 ```

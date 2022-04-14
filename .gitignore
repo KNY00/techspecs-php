@@ -2,5 +2,3 @@ vendor
 .php_cs.cache
 .phpunit.result.cache
 .vscode
-index.php
-phpcs.xml
